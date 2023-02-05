@@ -1,0 +1,66 @@
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+#headchild {
+  visibility: hidden;
+}
+
+#headphone:hover > #headchild {
+  visibility: visible;
+}
+
+#move {
+  animation: animate 30s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+#bgNews {
+  background: #fd746c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #eb6f69,
+    #385777
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #cb4b44,
+    #3d6186
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#leftanim,
+#leftanim1,
+#leftanim2 {
+  opacity: 0;
+  filter: blur(2px);
+  transform: translateX(-100%);
+  animation: moveleft 1.1s linear forwards;
+}
+@keyframes moveleft {
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0%);
+  }
+}
+#rightanim {
+  opacity: 0;
+  filter: blur(2px);
+  transform: translateX(100%);
+  animation: moveright 1s linear forwards;
+}
+@keyframes moveright {
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0%);
+  }
+}
